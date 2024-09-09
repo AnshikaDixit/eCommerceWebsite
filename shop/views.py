@@ -6,12 +6,12 @@ def index(request):
     return render(request, "shop/index.html")
 
 def about(request):
-    return HttpResponse("We are at About")
-    # return render(request, "shop/index.html")
+    # return HttpResponse("We are at About")
+   return render(request, "shop/about.html")
 
 def search(request):
-    return HttpResponse("We are at search")
-    # return render(request, "shop/index.html")
+    # return HttpResponse("We are at search")
+    return render(request, "shop/about.html")
 
 def contact(request):
     # return render(request, "shop/index.html")
