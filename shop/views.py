@@ -75,10 +75,10 @@ def checkout(request):
         address = request.POST.get('address1', '') + " " + request.POST.get('address2', '')
         city = request.POST.get('city', '')
         state = request.POST.get('state', '')
-        zip_code = request.POST.get('zip_code', '')
+        zipcode = request.POST.get('zipcode', '')
         phone = request.POST.get('phone', '')
         order = Orders(items_json=items_json, name=name, email=email, address=address, city=city,
-                       state=state, zip_code=zip_code, phone=phone)
+                       state=state, zipcode=zipcode, phone=phone)
         order.save()
         update = OrderUpdate(order_id=order.order_id, update_desc="The order has been placed")
         update.save()
