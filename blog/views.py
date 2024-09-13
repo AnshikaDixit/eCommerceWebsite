@@ -11,6 +11,6 @@ def index(request):
     return render(request, 'blog/index.html', {"myPosts":myPosts})
 
 def blogpost(request, id):
-    post = Blogpost.objects.filter(post_id = id)[0]
+    post = Blogpost.objects.filter(post_id = id)
     print(post)
     return render(request, 'blog/blogpost.html', {"post":post})
